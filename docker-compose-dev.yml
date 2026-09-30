@@ -1,6 +1,6 @@
 services:
   web:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.dev
     ports:
@@ -9,6 +9,7 @@ services:
       - /app/node_modules
       - .:/app
   tests:
+    stdin_open: true
     build:
       context: .
       dockerfile: Dockerfile.dev
